@@ -14,7 +14,7 @@ subject_train <- read.table("UCI HAR Dataset/train/subject_train.txt", col.names
 x_train <- read.table("UCI HAR Dataset/train/X_train.txt", col.names = features$functions)
 y_train <- read.table("UCI HAR Dataset/train/y_train.txt", col.names = "code")
 
-# Step 1: Merges the training and the test sets to create one data set.
+  # Step 1: Merges the training and the test sets to create one data set.
 
 ds.x <- rbind(x_train, x_test)
 ds.y <- rbind(y_train, y_test)
@@ -59,11 +59,9 @@ names(uci.mstd)<-gsub("gravity", "gravity", names(uci.mstd))
 names(uci.mstd)
 
 
-#From the data set in step 4, creates a second, 
+#Step 5: From the data set in step 4, creates a second, 
 #independent tidy data set with the average of each variable for each activity and each subject.
 
-uci2 <-aggregate(. ~subject + activity, uci.mstd, mean)
-uci2<-uci2[order(uci2$subject,uci2$activity),]
 
 uci.final <- uci2 %>%
   group_by(subject, activity) %>%
