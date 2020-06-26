@@ -5,50 +5,44 @@ Dataset downloaded and extracted under the folder called UCI HAR Dataset
 
 ## Assign Data Variables
  features <- features.txt : 561 rows, 2 columns <br/>
-  -The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ.
-  -activities <- activity_labels.txt : 6 rows, 2 columns
-  -List of activities performed when the corresponding measurements were taken and its codes (labels)
-  -subject_test <- test/subject_test.txt : 2947 rows, 1 column
-  -contains test data of 9/30 volunteer test subjects being observed
-  -x_test <- test/X_test.txt : 2947 rows, 561 columns
-  -contains recorded features test data
-y_test <- test/y_test.txt : 2947 rows, 1 columns
-contains test data of activities’code labels
-subject_train <- test/subject_train.txt : 7352 rows, 1 column
-contains train data of 21/30 volunteer subjects being observed
-x_train <- test/X_train.txt : 7352 rows, 561 columns
-contains recorded features train data
-y_train <- test/y_train.txt : 7352 rows, 1 columns
-contains train data of activities’code labels
+  -The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. <br/>
+  -activities <- activity_labels.txt : 6 rows, 2 columns <br/>
+  -List of activities performed when the corresponding measurements were taken and its codes (labels) <br/>
+  -subject_test <- test/subject_test.txt : 2947 rows, 1 column <br/>
+  -contains test data of 9/30 volunteer test subjects being observed <br/>
+  -x_test <- test/X_test.txt : 2947 rows, 561 columns <br/>
+  -contains recorded features test data <br/>
+  -y_test <- test/y_test.txt : 2947 rows, 1 columns <br/>
+  -contains test data of activities’code labels <br/>
+  -subject_train <- test/subject_train.txt : 7352 rows, 1 column <br/>
+  -contains train data of 21/30 volunteer subjects being observed <br/>
+  -x_train <- test/X_train.txt : 7352 rows, 561 columns <br/> 
+  -contains recorded features train data <br/> 
+  -y_train <- test/y_train.txt : 7352 rows, 1 columns <br/>
+  -contains train data of activities’code labels <br/>
 
 
 ## Merges the training and the test sets to create one data set
-ds.x (10299 rows, 561 columns) is created by merging x_train and x_test using rbind() function
-ds.y (10299 rows, 1 column) is created by merging y_train and y_test using rbind() function
-subject (10299 rows, 1 column) is created by merging subject_train and subject_test using rbind() function
-uci.df (10299 rows, 563 column) is created by merging subject, ds.x and ds.y using cbind() function
+ds.x (10299 rows, 561 columns) is created by merging x_train and x_test using rbind() function <br/>
+ds.y (10299 rows, 1 column) is created by merging y_train and y_test using rbind() function <br/>
+subject (10299 rows, 1 column) is created by merging subject_train and subject_test using rbind() function <br/>
+uci.df (10299 rows, 563 column) is created by merging subject, ds.x and ds.y using cbind() function <br/>
 
-Extracts only the measurements on the mean and standard deviation for each measurement
-uci.mstd (10299 rows, 88 columns) is created by subsetting uci.df, selecting only columns: subject, code and the measurements on the mean and standard deviation (std) for each measurement
-
-Uses descriptive activity names to name the activities in the data set
-Entire numbers in code column of the uci.mstd replaced with corresponding activity taken from second column of the activities variable
+Extracts only the measurements on the mean and standard deviation for each measurement <br/>
+uci.mstd (10299 rows, 88 columns) is created by subsetting uci.df, 
+selecting only columns: subject, code and the measurements on the mean and standard deviation (std) for each measurement <br/>
 
 ## Appropriately labels the data set with descriptive variable names
-code column in uci.mstd renamed into activities
-All Acc in column’s name replaced by Accelerometer
-All Gyro in column’s name replaced by Gyroscope
-All BodyBody in column’s name replaced by Body
-All Mag in column’s name replaced by Magnitude
-All start with character f in column’s name replaced by Frequency
-All start with character t in column’s name replaced by Time
+code column in uci.mstd renamed into activities <br/>
+All Acc in column’s name replaced by Accelerometer <br/>
+All Gyro in column’s name replaced by Gyroscope <br/>
+All BodyBody in column’s name replaced by Body <br/>
+All Mag in column’s name replaced by Magnitude  <br/>
+All start with character f in column’s name replaced by Frequency <br/>
+All start with character t in column’s name replaced by Time <br/>
 
-From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
-uci.final (180 rows, 88 columns) is created by sumarizing uci.mstd taking the means of each variable for each activity and each subject, after groupped by subject and activity.
-Export uci.final into FinalData.txt file.
-
-
-Appropriately labels the data set with descriptive variable names.
-From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-uci.final is the exported final data after going through all the sequences described above.
+From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject <br/>
+uci.final (180 rows, 88 columns) <br/>
+is created by sumarizing uci.mstd taking the means of each variable for each activity and each subject, after groupped by subject and activity.<br/>
+Export uci.final into FinalData.txt file.<br/>
 
