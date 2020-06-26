@@ -1,6 +1,6 @@
 # Getting.Cleaning.Data
 
-Course Project
+# Course Project
 
 The run_analysis.R script performs the data preparation and takes you step by step through the 5 questions asked for the project.
 
