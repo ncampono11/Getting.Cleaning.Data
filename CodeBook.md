@@ -1,11 +1,10 @@
-##Modifications
-the original data was modifies by
+## Modifications
 Merging the training and the test sets to create one data set. <br/>
 Extracting only the measurements on the mean and standard deviation for each measurement.<br/>
 Useing descriptive activity names to name the activities in the data set<br/>
 Appropriately labeling the data set with descriptive variable names.<br/>
 
-##vIdentififiers
+## Identififiers
 The first two columnsare Identifiers:
 Subject <br/> 
 Activity <br/>
