@@ -5,7 +5,7 @@ Useing descriptive activity names to name the activities in the data set<br/>
 Appropriately labeling the data set with descriptive variable names.<br/>
 
 ## Identififiers
-The first two columnsare Identifiers:
+The first two columnsare Identifiers: <br/> 
 Subject <br/> 
 Activity <br/>
 
