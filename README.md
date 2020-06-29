@@ -8,8 +8,8 @@ First I unzipped the data into my working directory. Then proceeded to follow th
 
 # Step 1: Merge the training and the test sets to create one data set.
 
-I completed this by rbinding the test and train datasets for x , y , and subject.
-I called my new merged data set uci.df
+I completed this by rbinding the test and train datasets for data.train and data.test
+I called my new merged data set uci
 
 # Step 2: Extract only the measurements on the mean and standard deviation for each measurement
 
@@ -27,4 +27,4 @@ I chose appropriate names to rename the activiies in the data set.
 # independent tidy data set with the average of each variable for each activity and each subject.
 
 Grouping by subject and activity I applied the mean to all.
-Once stored in the varaible uci.final I wrote this dataset to my working directory
+Once stored in the varaible tidy.data I wrote this dataset to my working directory
